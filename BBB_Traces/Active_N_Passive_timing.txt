@@ -1,0 +1,57 @@
+
+== Real-Time Priority Order ==
+
+Priority AHRS -> FlightControl -> Telemetry
+where AHRS is the highest priority (shortest period)
+
+Real-Time Periods (ms):
+AHRS: 1000
+FlightControl: 5000
+Telemetry: 10000
+
+
+== ACTIVE MODE Server Priority Level: 2 ==
+
+
+ACTIVE Mode Priority order:
+FS_LIB > IDS_BIN > FS_BIN > NW_PCKT
+
+Security Task parameters (ACTIVE MODE):
+
+
+#########
+WCET:
+#########
+FS_LIB: 2670161982.000000 (ns)
+IDS_BIN: 3975359564.000000 (ns)
+FS_BIN: 4031471265.000000 (ns)
+NW_PCKT: 4220361072.000000 (ns)
+
+
+#########
+Periods (ACTIVE):
+#########
+FS_LIB: 26701619869.326065 (ns)
+IDS_BIN: 39753595713.437057 (ns)
+FS_BIN: 40314712724.473633 (ns)
+NW_PCKT: 42203610797.963028 (ns)
+
+
+PASSIVE Mode Priority order:
+IDS_BIN > NW_PCKT
+
+
+Security Task parameters (PASSIVE MODE):
+
+#########
+WCET:
+#########
+FS_BIN: 4031471265.000000 (ns)
+NW_PCKT: 4220361072.000000 (ns)
+
+
+#########
+Periods (PASSIVE):
+#########
+FS_BIN: 88225785954.637924 (ns)
+NW_PCKT: 88225785958.401398 (ns)
